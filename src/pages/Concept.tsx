@@ -1,8 +1,4 @@
-interface ConceptProps {
-  onNavigate: (page: string) => void;
-}
-
-export default function Concept({ onNavigate }: ConceptProps) {
+export default function Concept() {
   return (
     <div className="min-h-[calc(100vh-80px)] px-6 md:px-12 py-16">
       <div className="max-w-6xl mx-auto">

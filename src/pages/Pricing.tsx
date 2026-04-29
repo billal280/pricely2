@@ -10,16 +10,12 @@ interface PricingPlan {
   features: string[];
 }
 
-interface PricingProps {
-  onNavigate: (page: string) => void;
-}
-
 const supabase = createClient(
   import.meta.env.VITE_SUPABASE_URL,
   import.meta.env.VITE_SUPABASE_ANON_KEY
 );
 
-export default function Pricing({ onNavigate }: PricingProps) {
+export default function Pricing() {
   const [plans, setPlans] = useState<PricingPlan[]>([]);
   const [loading, setLoading] = useState(true);
 

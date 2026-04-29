@@ -2,16 +2,12 @@ import { useState } from 'react';
 import { Phone, Mail, MapPin } from 'lucide-react';
 import { createClient } from '@supabase/supabase-js';
 
-interface ContactProps {
-  onNavigate: (page: string) => void;
-}
-
 const supabase = createClient(
   import.meta.env.VITE_SUPABASE_URL,
   import.meta.env.VITE_SUPABASE_ANON_KEY
 );
 
-export default function Contact({ onNavigate }: ContactProps) {
+export default function Contact() {
   const [formData, setFormData] = useState({
     prenom: '',
     nom: '',

@@ -1,10 +1,7 @@
 import { ChevronRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
-interface HeroProps {
-  onNavigate: (page: string) => void;
-}
-
-export default function Hero({ onNavigate }: HeroProps) {
+export default function Hero() {
   return (
     <div className="relative min-h-[calc(100vh-80px)] flex items-center">
       <div
@@ -29,13 +26,13 @@ export default function Hero({ onNavigate }: HeroProps) {
           </div>
         </div>
 
-        <button
-          onClick={() => onNavigate('pricing')}
-          className="bg-purple-600 hover:bg-purple-500 text-white px-8 py-3 rounded-lg font-semibold transition-all hover:shadow-lg hover:shadow-purple-600/50 flex items-center gap-2 group"
+        <Link
+          to="/pricing"
+          className="bg-purple-600 hover:bg-purple-500 text-white px-8 py-3 rounded-lg font-semibold transition-all hover:shadow-lg hover:shadow-purple-600/50 flex items-center gap-2 group inline-flex"
         >
           Inscrivez vous !
           <ChevronRight size={20} className="group-hover:translate-x-1 transition-transform" />
-        </button>
+        </Link>
 
         <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
